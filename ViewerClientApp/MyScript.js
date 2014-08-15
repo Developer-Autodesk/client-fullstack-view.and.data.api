@@ -452,7 +452,8 @@ function Model_selectedItem(modelList)
         var zoomcb = document.getElementById("ZoomCheckbox");
         if (zoomcb.checked == true) {
             // Zoom if needed
-            viewer3D.docstructure.handleAction(["focus"], selectedObjectdbId);
+            //viewer3D.docstructure.handleAction(["focus"], selectedObjectdbId);  ?? docstructure does not exist?
+            viewer3D.dockingPanels[1].handleAction(["focus"], selectedObjectdbId);
         }
 
         // Update the properties of the item that was selected.
